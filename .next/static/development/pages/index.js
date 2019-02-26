@@ -71692,7 +71692,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/jacobwilliam/Desktop/hack-news-pwa/pages/index.js";
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n    padding: 10px;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n    padding: 20px;\n    margin: 10px auto;\n    max-width: 900px;\n    background-color: rgba(113, 149, 206, 0.2);\n    border-radius: 10px;\n\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -71751,7 +71751,7 @@ function (_Component) {
           statusCode: 503,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 41
+            lineNumber: 46
           },
           __self: this
         });
@@ -71762,7 +71762,7 @@ function (_Component) {
           message: "Posts",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 44
+            lineNumber: 49
           },
           __self: this
         });
@@ -71771,20 +71771,20 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(Main, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47
+          lineNumber: 52
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_Header__WEBPACK_IMPORTED_MODULE_9__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 48
+          lineNumber: 53
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_StoryList__WEBPACK_IMPORTED_MODULE_13__["default"], {
         stories: this.state.stories,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49
+          lineNumber: 54
         },
         __self: this
       }));

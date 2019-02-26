@@ -9,7 +9,12 @@ import Spinner from '../components/Spinner';
 import StoryList from '../components/StoryList';
 
 const Main = styled.div`
-    padding: 10px;
+    padding: 20px;
+    margin: 10px auto;
+    max-width: 900px;
+    background-color: rgba(113, 149, 206, 0.2);
+    border-radius: 10px;
+
 `
 
 export default class Index extends Component {
