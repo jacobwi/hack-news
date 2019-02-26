@@ -1,8 +1,11 @@
 import React, { Component } from 'react'
-import { Button, Image, List, Icon } from 'semantic-ui-react';
+import { Button, Label, List, Icon } from 'semantic-ui-react';
 import styled from 'styled-components';
+import moment from "moment";
 
-const Points = styled.div`
+
+
+const Points= styled.div`
     width: 54px;
     text-align: center;
     
@@ -16,6 +19,7 @@ const Points = styled.div`
     }
 `
 
+const timeFromNow = timestamp => moment(timestamp).fromNow();
 
 export default class StoryList extends Component {
     constructor(props) {
@@ -28,17 +32,23 @@ export default class StoryList extends Component {
   render() {
     return (
     <List divided verticalAlign='middle'>
-    
         { this.state.stories && this.state.stories.map((item, key) => {
-            return  <List.Item key={key}>
+            return  <List.Item key={key} >
                 <List.Content floated='right'>
-                
                 <Points>
                     <Icon name='thumbs up outline' />
                     <p>{item.points === null ? 0 : item.points}</p>
                 </Points>
                 </List.Content>
                 <List.Content>{item.title}</List.Content>
+                <List.Description>
+                    {item.time_ago}
+                </List.Description>
+                <List.Description>
+                <Label as='a' size='mini'>
+                    <Icon name='comment' /> {item.comments_count}
+                </Label>
+                </List.Description>
             </List.Item>
         })}
     </List>
