@@ -4,11 +4,13 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "next"
+    "dev": "next",
+    "pretty": "prettier --write \"./**/*.{js,jsx,json}\""
   },
   "dependencies": {
     "axios": "^0.18.0",
     "fs": "^0.0.1-security",
+    "isomorphic-fetch": "^2.2.1",
     "jdenticon": "^2.1.1",
     "moment": "^2.24.0",
     "next": "^8.0.3",
