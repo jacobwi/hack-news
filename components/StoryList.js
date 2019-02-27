@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import { Button, Label, List, Icon } from "semantic-ui-react";
+import React from "react";
+import { Label, List, Icon } from "semantic-ui-react";
 import styled from "styled-components";
-import moment from "moment";
+import Link from "next/link";
 
 const Points = styled.div`
   width: 54px;
@@ -29,13 +29,19 @@ const StoryList = ({ stories }) => (
                 <p>{item.points === null ? 0 : item.points}</p>
               </Points>
             </List.Content>
-            <List.Content>{item.title}</List.Content>
+            <List.Content>
+              <a href={item.url}>{item.title}</a>
+            </List.Content>
             <List.Description>{item.time_ago}</List.Description>
-            <List.Description>Posted by <em>{item.user}</em></List.Description>
             <List.Description>
-              <Label as="a" size="mini">
-                <Icon name="comment" /> {item.comments_count}
-              </Label>
+              Posted by <em>{item.user}</em>
+            </List.Description>
+            <List.Description>
+              <Link href={`/story?id=${item.id}`}>
+                <Label as="a" size="mini">
+                  <Icon name="comment" /> {item.comments_count}
+                </Label>
+              </Link>
             </List.Description>
           </List.Item>
         );
