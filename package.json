@@ -5,7 +5,10 @@
   "license": "MIT",
   "scripts": {
     "dev": "next",
-    "pretty": "prettier --write \"./**/*.{js,jsx,json}\""
+    "build": "next build",
+    "export": "next export",
+    "pretty": "prettier --write \"./**/*.{js,jsx,json}\"",
+    "deploy": "cd out && now --public"
   },
   "dependencies": {
     "axios": "^0.18.0",
