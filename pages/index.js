@@ -8,6 +8,7 @@ import "semantic-ui-css/semantic.min.css";
 import Spinner from "../components/Spinner";
 import StoryList from "../components/StoryList";
 import Link from "next/link";
+import Head from "next/head";
 
 const Main = styled.div`
   padding: 20px;
@@ -70,6 +71,10 @@ export default class Index extends Component {
     }
     return (
       <Main>
+        <Head>
+          <title>Hacker News</title>
+          <meta name="description" content="Hacker News Clone" />
+        </Head>
         <Header />
         {this.state.stories && <StoryList stories={this.props.stories} />}
         <Divider />
