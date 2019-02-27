@@ -20,9 +20,9 @@ const Points = styled.div`
 const StoryList = ({ stories }) => (
   <List divided verticalAlign="middle">
     {stories &&
-      stories.map((item, key) => {
+      stories.map(item => {
         return (
-          <List.Item key={key}>
+          <List.Item key={item.id}>
             <List.Content floated="right">
               <Points>
                 <Icon name="thumbs up outline" />
@@ -31,6 +31,7 @@ const StoryList = ({ stories }) => (
             </List.Content>
             <List.Content>{item.title}</List.Content>
             <List.Description>{item.time_ago}</List.Description>
+            <List.Description>Posted by <em>{item.user}</em></List.Description>
             <List.Description>
               <Label as="a" size="mini">
                 <Icon name="comment" /> {item.comments_count}
